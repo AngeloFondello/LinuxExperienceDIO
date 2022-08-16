@@ -1,6 +1,6 @@
-#!/bin/ban
+#!/bin/bash
 
-echo"Criando Diretórios"
+echo "Criando Diretórios"
 
 mkdir publico 
 
@@ -10,11 +10,11 @@ mkdir ven
 
 mkdir sec
 
-echo" "
-echo"------------------------"
-echo" "
+echo " "
+echo "------------------------"
+echo " "
 
-echo"Criando Grupos"
+echo "Criando Grupos"
 
 groupadd GRP_ADM
 
@@ -22,11 +22,11 @@ groupadd GRP_VEN
 
 groupadd GRP_SEC
 
-echo" "
-echo"------------------------"
-echo" "
+echo " "
+echo "------------------------"
+echo " "
 
-echo"Criando Usuários"
+echo "Criando Usuários"
 
 useradd carlos -m -s /bin/bash -p $(python3 -c 'import crypt; print(crypt.crypt("Senha123"))') -G GRP_ADM
 useradd maria -m -s /bin/bash -p $(python3 -c 'import crypt; print(crypt.crypt("Senha123"))') -G GRP_ADM
@@ -40,21 +40,21 @@ useradd josefina -m -s /bin/bash -p $(python3 -c 'import crypt; print(crypt.cryp
 useradd amanda -m -s /bin/bash -p $(python3 -c 'import crypt; print(crypt.crypt("Senha123"))') -G GRP_SEC
 useradd rogerio -m -s /bin/bash -p $(python3 -c 'import crypt; print(crypt.crypt("Senha123"))') -G GRP_SEC
 
-echo" "
-echo"------------------------"
-echo" "
+echo " "
+echo "------------------------"
+echo " "
 
-echo"Separando Usuários em seus devidos grupos..."
+echo "Separando Usuários em seus devidos grupos..."
 
-echo" "
-echo"------------------------"
-echo" "
+echo " "
+echo "------------------------"
+echo " "
 
-echo"Especificando permições..."
+echo "Especificando permições..."
 
-echo" "
-echo"------------------------"
-echo" "
+echo " "
+echo "------------------------"
+echo " "
 
 chmod root:GRP_ADM /adm
 chmod root:GRP_VEN /ven
@@ -65,5 +65,5 @@ chmod 770 /ven
 chmod 770 /sec
 chmod 777 /publico
 
-echo"Finalizado!"
+echo "Finalizado!"
 

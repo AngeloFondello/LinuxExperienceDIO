@@ -18,5 +18,5 @@ unzip main.zip
 
 echo "Organizando arquivos..."
 cd linux-site-dio
-cp -r* /var/www/html/
+cp -R * /var/www/html/
 
