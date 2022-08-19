@@ -14,7 +14,7 @@ cd /tmp
 wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
 
 echo "Descompactando Arquivos..."
-unzip Linux-site-dio- main.zip
+unzip Linux-site-dio-main.zip
 
 echo "Organizando arquivos..."
 cd linux-site-dio
